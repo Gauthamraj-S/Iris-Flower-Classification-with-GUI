@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function openInNewTab() {
+            var win = window.open('', '_blank');
+            win.document.write('<html><head><title>Output</title></head><body>');
+            win.document.write('{{ output }}');
+            win.document.write('</body></html>');
+            win.document.close();
+        }
+        window.onload = openInNewTab;
+    </script>
+    <title>My App</title>
+</head>
+<body>
+    <h1>Model Accuracy: {{ accuracy }}</h1>
+    <div>
+        {{ matrix }}
+    </div>
+</body>
+</html>
